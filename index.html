@@ -1,3 +1,218 @@
-Hola, amigos
-Esta es mi primera web hecha a mano.
-Adiós.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan David - Profesional de Yoga</title>
+    <style>
+        :root {
+            --primary: #2C5F2D;
+            --secondary: #97BC62FF;
+            --background: #F4F1DE;
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+            --accent: #E07A5F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text-light);
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .about-section {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-top: -3rem;
+            position: relative;
+            z-index: 3;
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-image-placeholder {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 20px rgba(151, 188, 98, 0.4);
+            flex-shrink: 0;
+            border: 5px solid white;
+        }
+
+        .about-text h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .university-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 10px rgba(224, 122, 95, 0.3);
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .services {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .services h2 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--secondary);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Namasté, soy Juan David</h1>
+            <p class="subtitle">Encontrando el equilibrio entre mente, cuerpo y alma</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="about-section">
+            <div class="profile-image-placeholder">
+                [Foto de Yoga]
+            </div>
+            <div class="about-text">
+                <span class="university-badge">🎓 Universidad del Súper Yoga de la India</span>
+                <h2>Profesional en Artes del Yoga</h2>
+                <p>Mi viaje en el mundo del yoga me llevó a las raíces mismas de esta disciplina milenaria. Tras años de estudio y práctica profunda en la <strong>Universidad del Súper Yoga de la India</strong>, he perfeccionado las técnicas ancestrales para traerlas a la vida moderna.</p>
+                <p>Mi enfoque se centra en la alineación consciente, la respiración profunda (Pranayama) y la meditación activa, creando un espacio seguro para que estudiantes de todos los niveles exploren su potencial físico y espiritual.</p>
+            </div>
+        </section>
+
+        <section class="services">
+            <h2>Mis Prácticas</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Hatha Yoga Tradicional</h3>
+                    <p>Clases guiadas paso a paso para dominar las posturas fundamentales (asanas), fortalecer el cuerpo y mejorar la flexibilidad con técnicas auténticas de la India.</p>
+                </div>
+                <div class="card">
+                    <h3>Meditación & Pranayama</h3>
+                    <p>Sesiones enfocadas en el control de la energía vital a través de la respiración. Aprende a calmar tu mente y reducir el estrés de la vida diaria.</p>
+                </div>
+                <div class="card">
+                    <h3>Yoga Terapéutico</h3>
+                    <p>Prácticas personalizadas diseñadas para aliviar dolores crónicos, recuperar la movilidad y sanar el cuerpo utilizando el conocimiento profundo de la anatomía sutil.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Juan David - Profesional de Yoga. Namasté.</p>
+    </footer>
+
+</body>
+</html>
